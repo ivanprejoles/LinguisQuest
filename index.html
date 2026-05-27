@@ -215,90 +215,36 @@
 
     <!-- LANGUAGE CARDS -->
 
-    <div class="grid md:grid-cols-3 gap-8 mb-14">
+<div class="grid md:grid-cols-1 gap-8 mb-14 max-w-xl mx-auto">
 
-      <!-- SPANISH -->
+  <!-- TAGALOG -->
 
-      <div class="glass border border-red-400/20 rounded-[35px] p-8">
+  <div class="glass border border-emerald-400/20 rounded-[35px] p-8">
 
-        <div class="mb-6 rounded-[30px] overflow-hidden h-52">
+    <div class="mb-6 rounded-[30px] overflow-hidden h-52">
 
-          <img
-            src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1200&auto=format&fit=crop"
-            class="w-full h-full object-cover">
-
-        </div>
-
-        <h2 class="text-4xl font-black mb-4">
-          Spanish
-        </h2>
-
-        <p class="text-slate-300 leading-relaxed mb-8">
-          Learn greetings, travel conversations, and daily communication in Spanish.
-        </p>
-
-        <button onclick="addLanguage('Spanish')"
-          class="w-full bg-red-500 hover:bg-red-400 py-4 rounded-2xl font-black text-xl transition">
-          Add Language
-        </button>
-
-      </div>
-
-      <!-- FRENCH -->
-
-      <div class="glass border border-blue-400/20 rounded-[35px] p-8">
-
-        <div class="mb-6 rounded-[30px] overflow-hidden h-52">
-
-          <img
-            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
-            class="w-full h-full object-cover">
-
-        </div>
-
-        <h2 class="text-4xl font-black mb-4">
-          French
-        </h2>
-
-        <p class="text-slate-300 leading-relaxed mb-8">
-          Explore immersive French dialogue, quests, and pronunciation practice.
-        </p>
-
-        <button onclick="addLanguage('French')"
-          class="w-full bg-blue-500 hover:bg-blue-400 py-4 rounded-2xl font-black text-xl transition">
-          Add Language
-        </button>
-
-      </div>
-
-      <!-- TAGALOG -->
-
-      <div class="glass border border-emerald-400/20 rounded-[35px] p-8">
-
-        <div class="mb-6 rounded-[30px] overflow-hidden h-52">
-
-          <img
-            src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1200&auto=format&fit=crop"
-            class="w-full h-full object-cover">
-
-        </div>
-
-        <h2 class="text-4xl font-black mb-4">
-          Tagalog
-        </h2>
-
-        <p class="text-slate-300 leading-relaxed mb-8">
-          Practice Filipino communication with real-life scenarios and speaking exercises.
-        </p>
-
-        <button onclick="addLanguage('Tagalog')"
-          class="w-full bg-emerald-500 hover:bg-emerald-400 py-4 rounded-2xl font-black text-xl transition">
-          Add Language
-        </button>
-
-      </div>
+      <img
+        src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1200&auto=format&fit=crop"
+        class="w-full h-full object-cover">
 
     </div>
+
+    <h2 class="text-4xl font-black mb-4">
+      Tagalog
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+      Practice Filipino communication with real-life scenarios and speaking exercises.
+    </p>
+
+    <button onclick="addLanguage('Tagalog')"
+      class="w-full bg-emerald-500 hover:bg-emerald-400 py-4 rounded-2xl font-black text-xl transition">
+      Add Language
+    </button>
+
+  </div>
+
+</div>
 
     <!-- STORAGE -->
 
@@ -615,19 +561,7 @@ function renderLanguageStorage() {
 
   selectedLanguages.forEach((language, index) => {
 
-    let color = "cyan";
-
-    if (language === "Spanish") {
-      color = "red";
-    }
-
-    if (language === "French") {
-      color = "blue";
-    }
-
-    if (language === "Tagalog") {
-      color = "emerald";
-    }
+    let color = "emerald";
 
     container.innerHTML += `
 
@@ -761,30 +695,30 @@ function startLearningJourney() {
     // ==========================
 
     const levels = [
-      {
-        emoji: "👋",
-        title: "Greetings",
-        question: 'What does "Hola" mean?',
-        choices: ["Hello", "Goodbye", "Thank You"],
-        answer: "Hello"
-      },
+  {
+    emoji: "👋",
+    title: "Pagbati",
+    question: 'Ano ang ibig sabihin ng "Magandang Umaga"?',
+    choices: ["Good Morning", "Good Night", "Thank You"],
+    answer: "Good Morning"
+  },
 
-      {
-        emoji: "🍔",
-        title: "Food",
-        question: 'What does "Pan" mean?',
-        choices: ["Bread", "Rice", "Water"],
-        answer: "Bread"
-      },
+  {
+    emoji: "🍚",
+    title: "Pagkain",
+    question: 'Ano ang ibig sabihin ng "Tubig"?',
+    choices: ["Water", "Rice", "Bread"],
+    answer: "Water"
+  },
 
-      {
-        emoji: "🚆",
-        title: "Travel",
-        question: 'What does "Tren" mean?',
-        choices: ["Train", "Airport", "Bus"],
-        answer: "Train"
-      }
-    ];
+  {
+    emoji: "🚌",
+    title: "Paglalakbay",
+    question: 'Ano ang ibig sabihin ng "Palengke"?',
+    choices: ["Market", "Airport", "School"],
+    answer: "Market"
+  }
+];
 
     function renderPhase1() {
 
@@ -998,86 +932,86 @@ function startLearningJourney() {
     const vnEvents = [
 
   {
-    character: "Sophia",
+    character: "Maria",
 
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe0SguUhtkZDqsHuBOutoOBeYSVW-O-XAEMQ&s",
 
-    text: "Welcome traveler... Are you ready to begin your French journey?",
+    text: "Maligayang pagdating! Handa ka na bang simulan ang iyong paglalakbay sa Tagalog?",
 
     choices: [
       {
-        text: "Yes, let's start!",
+        text: "Oo, magsimula na tayo!",
         next: 1
       },
 
       {
-        text: "I'm nervous...",
+        text: "Medyo kinakabahan ako...",
         next: 2
       }
     ]
   },
 
   {
-    character: "Sophia",
+    character: "Maria",
 
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNZNx-lUmnjsEU7L53-Kj9PyyPLg4SVJrNA&s",
 
-    text: "Très bien! Let's begin with greetings.",
+    text: "Magaling! Simulan natin sa mga simpleng pagbati.",
 
     choices: [
       {
-        text: "Continue",
+        text: "Magpatuloy",
         next: 3
       }
     ]
   },
 
   {
-    character: "Sophia",
+    character: "Maria",
 
     image: "https://i.imgur.com/n4WbJ6h.png",
 
-    text: "Don't worry. I'll guide you step by step.",
+    text: "Huwag kang mag-alala. Gagabayan kita sa bawat hakbang.",
 
     choices: [
       {
-        text: "Thank you",
+        text: "Salamat",
         next: 3
       }
     ]
   },
 
   {
-    character: "Sophia",
+    character: "Maria",
 
     image: "https://i.imgur.com/8Km9tLL.png",
 
-    text: 'How do you say "Hello" in French?',
+    text: 'Ano ang tamang pagbati kapag umaga?',
 
     choices: [
       {
-        text: "Bonjour",
+        text: "Magandang Umaga",
         next: 4,
         correct: true
       },
 
       {
-        text: "Gracias",
+        text: "Paalam",
         next: 4
       }
     ]
   },
 
   {
-    character: "Sophia",
+    character: "Maria",
 
     image: "https://i.imgur.com/vM0QmK7.png",
 
-    text: "Amazing! You're learning quickly.",
+    text: "Ang galing mo! Mabilis kang natututo.",
 
     choices: [
       {
-        text: "Finish Story",
+        text: "Tapusin ang Kuwento",
         next: null
       }
     ]
